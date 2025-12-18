@@ -205,3 +205,64 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ============================================
+# Проект: Предсказание цен на квартиры в Москве
+# ============================================
+
+# Данные (слишком большие для git, скачиваются через download_data.sh)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Обученные модели (слишком большие для git, регенерируются при запуске ноутбука)
+models/*.pkl
+models/*.pth
+models/*.h5
+models/*.onnx
+models/*.cbm
+!models/.gitkeep
+
+# Jupyter notebook outputs и checkpoints
+*.ipynb_checkpoints/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ML фреймворки логи и кэши
+# CatBoost
+catboost_info/
+notebooks/catboost_info/
+
+# XGBoost
+*.model
+
+# TensorBoard
+events.out.tfevents*
+
+# Логи обучения
+training_logs/
+logs/
+*.log
+
+# Временные файлы
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE специфичные файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Kaggle credentials
+kaggle.json
+.kaggle/kaggle.json
+
+# Локальные конфигурационные файлы
+.env.local
+config.local.yml
